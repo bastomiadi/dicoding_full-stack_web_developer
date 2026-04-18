@@ -1,0 +1,71 @@
+/* Reset Dasar */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header & Nav */
+header {
+    background-color: #004d40;
+    color: white;
+    padding: 20px;
+}
+
+nav ul {
+    display: flex; /* Menggunakan Flexbox untuk Navigasi */
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Kriteria Wajib: Layout Utama dengan Flexbox */
+main {
+    display: flex; /* Membuat kontainer utama menjadi Flex */
+    flex-direction: row; /* Berjejer ke samping */
+    padding: 20px;
+    gap: 20px;
+}
+
+#content {
+    flex: 3; /* Artikel mengambil porsi lebih besar */
+}
+
+aside {
+    flex: 1; /* Aside mengambil porsi lebih kecil */
+}
+
+/* Responsif untuk Mobile: Mengubah Row menjadi Column */
+@media screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+}
+
+/* Styling Foto di Aside */
+aside img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 50%;
+    display: block;
+    margin: 10px auto;
+}
+
+footer {
+    padding: 20px;
+    color: white;
+    background-color: #004d40;
+    text-align: center;
+    font-weight: bold;
+}
